@@ -63,7 +63,7 @@ public class CheckoutService {
     }
 
     public static void printReceipt(List<CartItem> items, double subtotal, double shippingFee, double totalAmount) {
-        System.out.println("** Checkout receipt **");
+        System.out.println("\n** Checkout receipt **");
         for (CartItem item : items) {
             Product product = item.getProduct();
             int quantity = item.getQuantity();
