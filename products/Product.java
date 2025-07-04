@@ -1,5 +1,7 @@
 package products;
 
+import exceptions.OutOfStockException;
+
 public class Product {
     private String name;
     private double price;
@@ -25,7 +27,7 @@ public class Product {
 
     public void updateQuantity(int amount) {
         if(amount > quantity) {
-            throw new IllegalArgumentException("Not enough stock for " + name);
+            throw new OutOfStockException("Not enough stock for " + name);
         }
         this.quantity -= amount;
     }
